@@ -1,0 +1,1952 @@
+// ---------- notebook---------- //
+@media only screen and (min-width: 1080px) and (max-width: 1500px)
+	// ---custom--- //
+
+	// --fullpage-- //
+	.container
+		width: 100%
+		transition: all .3s ease
+		z-index: 2
+	.container-add
+		z-index: 1
+	.section
+		width: 100%
+		height: 100vh
+	// --slick-slideshow-- //
+	.slick
+		display: block
+	.slick-slide
+		&:focus, a
+			outline: none
+	// slide-arrow //
+	.slide-arrow-wrap
+		z-index: 2
+		top: calc(50vh - 22px)
+		max-width: 1080px
+		+lrcenter
+	.slide-arrow-left, .slide-arrow-right
+		width: 44px
+		height: 44px
+		border-radius: 50px
+		background-color: #FFF
+		text-align: center
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		cursor: pointer
+		opacity: .5
+		transform: scale(1.0)
+		transition: all .2s ease-in-out
+		img
+			width: 8px
+	.slide-arrow-left
+		left: 0px
+		img
+			transform: rotate(180deg)
+	.slide-arrow-left:hover
+		opacity: 1
+		transform: scale(1.3)
+	.slide-arrow-right
+		right: 0px
+	.slide-arrow-right:hover
+		opacity: 1
+		transform: scale(1.3)
+
+	// normal-arrow //
+	.normal-arrow-wrap
+		z-index: 5
+		top: calc(50vh - 22px)
+		max-width: 1280px
+		+lrcenter
+	.normal-arrow-left, .normal-arrow-right
+		width: 44px
+		height: 44px
+		border-radius: 50px
+		border: 2px solid $green
+		text-align: center
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		cursor: pointer
+		transform: scale(1.0)
+		transition: all .2s ease-in-out
+		img
+			width: 8px
+	.normal-arrow-left
+		left: 0px
+		img
+			transform: rotate(180deg)
+	.normal-arrow-right
+		right: 0px
+	.normal-arrow-left:hover
+		transform: scale(1.3)
+	.normal-arrow-right:hover
+		transform: scale(1.3)
+
+	// --navgation-- //
+	.navgation-left-wrap, .navgation-right-wrap
+		width: 0px
+		height: 90vh
+		margin: auto
+		top: 0
+		bottom: 0
+		z-index: 10
+		position: fixed
+	.navgation-left-wrap
+		left: 0
+		transition: all 1.2s ease
+		z-index: 11
+	.navgation-left
+		width: 150px
+		height: 100%
+		left: 0px
+		display: flex
+		align-items: center
+		flex-direction: column
+		justify-content: space-between
+		a
+			display: block
+			width: 70px
+	.logo-row
+		display: block
+	.logo-column
+		display: none
+	.navgation-logo
+		fill: #fff
+		width: 70px
+		transition: all .3s ease
+	.navgation-menu
+	.navgation-open
+		left: 0px
+		cursor: pointer
+		transition: left .5s ease
+	.navgation-close
+		left: -150px
+		cursor: pointer
+		transition: left .5s ease
+		bottom: 20px
+	.nav-close-bg
+		width: 40px
+		height: 40px
+		border-radius: 20px
+		background-color: #FFF
+		transition: all .5s ease
+		+absolute_center
+	.nav-close-left
+		width: 18px
+		height: 2px
+		border-radius: 2px
+		background-color: #000
+		transform: rotate(0deg)
+		transition: all .6s ease
+		+absolute_center
+	.navgation-close:hover .nav-close-left
+		transform: rotate(45deg)
+		width: 20px
+	.nav-close-right
+		width: 18px
+		height: 2px
+		border-radius: 2px
+		background-color: #000
+		transform: rotate(0deg)
+		transition: all .6s ease
+		+absolute_center
+	.navgation-close:hover .nav-close-right
+		transform: rotate(-45deg)
+		width: 20px
+	.nav-close-text
+		+absolute_center
+		top: 22px
+		span
+			color: #fff
+			font-size: $s3
+	.nagation-left-fake
+		width: 40px
+		height: 122px
+		opacity: 0
+	.navgation-right-wrap
+		right: 0px
+		transition: all 1.2s ease
+	.navgation-right
+		width: 50px
+		height: 100%
+		right: 100px
+		display: flex
+		align-items: center
+		flex-direction: column
+		justify-content: space-between
+	.navgation-fb
+	.navgation-now-index
+		width: 50px
+		height: 250px
+		display: flex
+		align-items: center
+		flex-direction: column
+		justify-content: space-between
+		span
+			color: #fff
+			top: 1px
+	.nav-index-top
+		padding-left: 25px
+		transform: rotate(90deg)
+		border-right: 1px solid #fff
+		transition: all .3s ease
+		padding-right: 15px
+		overflow: hidden
+		span
+			left: 150px
+			animation: navtop-out .8s forwards
+	.nav-index-top-in
+		span
+			animation: navtop-in .6s forwards
+
+	@-webkit-keyframes navtop-in
+		0%
+			left: 0px
+			opacity: 1
+		100%
+			left: 150px
+			opacity: 0
+	@-webkit-keyframes navtop-out
+		20%
+			left: -20px
+			opacity: 0
+		100%
+			left: 0px
+			opacity: 1
+
+	.nav-index-middle
+		height: 15px
+		width: 100px
+		transform: rotate(90deg)
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: space-between
+		overflow: hidden
+		.now-index
+			width: 50px
+			opacity: 0
+			animation: navmid-out .6s forwards
+		.menu-font
+			opacity: 0
+			animation: navmid-out .6s forwards
+
+	.nav-index-middle-in
+		.now-index
+			animation: navmid-in .8s forwards
+		.menu-font
+			animation: navmid-in .8s forwards
+	@-webkit-keyframes navmid-in
+		0%
+			left: 0px
+			opacity: 1
+		80%
+			opacity: 0
+		100%
+			left: 40px
+			opacity: 0
+	@-webkit-keyframes navmid-out
+		20%
+			left: -20px
+			opacity: 0
+		100%
+			left: 0px
+			opacity: 1
+
+	.nav-index-circle
+		width: 8px
+		height: 8px
+		border: 2px solid #fff
+		transition: all .3s ease
+		border-radius: 20px
+		margin-right: 5px
+	.now-index
+		margin-left: 10px
+	.nav-index-bottom
+		transform: rotate(90deg)
+		border-left: 1px solid #fff
+		transition: all .3s ease
+		padding-left: 25px
+		padding-right: 15px
+		overflow: hidden
+		.menu-font
+			opacity: 0
+			animation: navbt-out .8s forwards
+	.nav-index-bottom-in
+		.menu-font
+			animation: navbt-in .8s forwards
+	@-webkit-keyframes navbt-in
+		0%
+			left: 0px
+			opacity: 1
+		80%
+			opacity: 0
+		100%
+			left: 40px
+			opacity: 0
+	@-webkit-keyframes navbt-out
+		20%
+			left: -20px
+			opacity: 0
+		100%
+			left: 0px
+			opacity: 1
+
+	.navgation-gotop
+		width: 30px
+		height: 30px
+		margin-bottom: 20px
+		border: 1px solid #fff
+		transition: all .3s ease
+		cursor: pointer
+		transform: scale(1)
+	.navgation-gotop:hover
+		transform: scale(1.2)
+	.navgation-bottom-wrap
+		width: 100%
+		height: 10vh
+		position: fixed
+		bottom: 0vh
+		z-index: 2
+		cursor: pointer
+		transition: all 1.2s ease
+	.navgation-bottom-wrap-add
+		bottom: -20vh
+	.navgation-bottom
+		+absolute_center
+		width: 10vh
+		height: 40px
+		transform: rotate(-90deg)
+		display: flex
+		flex-direction: column
+		text-align: right
+		cursor: pointer
+		span
+			letter-spacing: 4px
+			font-weight: bold
+			color: #fff
+			left: 2px
+			transition: all .4s ease
+			animation: navsc-in 1.2s forwards
+
+	.navgation-bottom:hover .navgation-bottom-line
+		width: 0vh
+	.navgation-bottom:hover
+		span
+			left: -10px
+	.navgation-bottom-line
+		height: 2px
+		width: 10vh
+		margin-bottom: 10px
+		background-color: #fff
+		transition: all .4s ease
+		animation: navscl-in 1.2s forwards
+
+
+	@-webkit-keyframes navsc-in
+		0%
+			left: 2px
+		100%
+			left: -10px
+	@-webkit-keyframes navsc-out
+		20%
+			left: -10px
+		100%
+			left: 2px
+	@-webkit-keyframes navscl-in
+		0%
+			width: 10vh
+		100%
+			width: 0vh
+	@-webkit-keyframes navscl-out
+		20%
+			width: 0vh
+		100%
+			width: 10vh
+
+
+
+	// -nav-svg- //
+	.facebook_icon
+		width: 50px
+		fill: #fff
+		transition: all .3s ease
+	.menuAnimate
+		fill: none
+		stroke: #fff
+		stroke-width: 2.5
+		transition: all .3s ease
+	.goto-top
+		width: 30px
+		height: 30px
+		transform: rotate(-90deg)
+		left: 8px
+		top: -9px
+		fill: none
+		stroke: #fff
+		stroke-width: 2
+		stroke-linecap: round
+		stroke-linejoin: round
+		stroke-miterlimit: 10
+		transition: all .3s ease
+	//-nav-svg-add-//
+	.facebook_icon-add
+		fill: $green
+	.menuAnimate-add
+		stroke: $green
+	.goto-top-add
+		stroke: $green
+	.navgation-logo-add
+		fill: $green
+	.navgation-gotop-add
+		border: 1px solid $green
+	.nav-index-top-add
+		border-right: 1px solid $green
+	.nav-index-circle-add
+		border: 2px solid $green
+	.nav-index-bottom-add
+		border-left: 1px solid $green
+	.navgation-now-index-add
+		span
+			color: $green
+	.navgation-now-index-product
+		opacity: 0
+
+	// -navgation-function- //
+	.navgation-left-add
+		left: -130px
+	.navgation-right-add
+		right: -100px
+	.navgation-bottom-add
+		bottom: -12vh
+	.navgation-open-add
+		left: -150px
+	.navgation-close-add
+		left: 0px
+	.navgation-bottom-color
+		span
+			color: $green
+	.navgation-bottom-line-add
+		background-color: $green
+	.navgation-bottom-scroll
+		span
+			animation: navsc-out 1.8s forwards
+		.navgation-bottom-line
+			animation: navscl-out 1.8s forwards
+
+
+	// --menu-- //
+	.menu-wrap
+		width: 100%
+		height: 100vh
+		position: fixed
+		z-index: 10
+		background-color: #000
+		left: -200vw
+	.menu-bg
+		width: 100%
+		height: 100vh
+		background-image: url(../images/headerBanner/0.jpg)
+		background-size: cover
+		background-position: center
+		position: absolute
+		z-index: 1
+		opacity: 0
+	.menu-mask
+		width: 100%
+		height: 100vh
+		background-color: #000
+		opacity: .5
+		left: -100vw
+		position: absolute
+		z-index: 2
+	.menu-main
+		max-width: 1600px
+		height: 0vh
+		z-index: 3
+		text-align: center
+		+absolute_center
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: space-between
+		overflow: hidden
+	.menu-left
+		width: 50%
+		height: 100%
+		border-right: 2px solid #fff
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: center
+		ul, li
+			width: 60%
+			list-style-type: none
+			margin: 0px
+			padding: 0px
+			color: #fff
+			margin-left: 20%
+			transition: all .6s ease
+		a
+			display: block
+			width: 100%
+			padding: 5px
+		li
+			width: 0%
+			display: flex
+			align-items: center
+			flex-direction: row
+			justify-content: flex-start
+			transition: all .6s ease
+			border-bottom: 1px solid #fff
+			padding-bottom: 15px
+			padding-top: 10px
+			left: -150px
+			opacity: 0
+		span
+			font-size: 24px
+			font-weight: 100
+			letter-spacing: 5px
+	.menu-left a:hover
+		li
+			width: 40%
+			margin-left: 5%
+		.menu-number
+			left: -30px
+		.menu-name
+			left: 15px
+		.menu-tip-line
+			background-color: transparent
+			transform: rotate(360deg)
+			width: 20px
+			height: 20px
+			border-radius: 15px
+			border: 2px solid #fff
+	.menu-left-add
+		li
+			width: 0%
+			margin-left: 10%
+		.menu-number
+			left: 20px
+		.menu-name
+			left: 20px
+		.menu-tip-line
+			opacity: 1
+			width: 0px
+			height: 30px
+			left: 80px
+	.menu-number
+		margin-right: 60px
+		left: 0px
+		transition: all .6s ease
+	.menu-name
+		margin-left: 60px
+		left: 0px
+		transition: all .6s ease
+		p
+			font-size: 16px
+			color: #fff
+			letter-spacing: 4px
+			margin-top: 3px
+	.menu-right
+		width: 50%
+		height: 100%
+	.menu-tip-line
+		position: absolute
+		width: 0px
+		height: 30px
+		background-color: #FFF
+		border-radius: 0px
+		border-right: 2px solid #fff
+		left: 70px
+		opacity: 1
+		transform: rotate(0deg)
+		transition: all 1.2s ease
+	.menu-right
+		width: 50%
+		height: 100vh
+		display: flex
+		align-items: center
+		flex-direction: column
+		justify-content: center
+		text-align: left
+	.direct-info-box
+		width: 80%
+		margin: 30px 0px
+		margin-left: 15%
+		opacity: 0
+		left: 200px
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: flex-start
+		transition: all .3s ease
+		cursor: pointer
+		a
+			display: flex
+			align-items: center
+			flex-direction: row
+			justify-content: flex-start
+	.direct-info-box:hover .direct-info-img
+		transform: scale(1.3)
+		margin-right: 30px
+	.direct-info-text
+		span, p
+			font-size: 17px
+			color: #fff
+			margin: 0px
+			padding: 0px
+		span
+			font-weight: bold
+			letter-spacing: 2px
+		p
+			font-size: 14px
+			letter-spacing: 1px
+	.direct-info-img
+		transform: scale(1)
+		transition: all .3s ease
+		width: 40px
+		margin-right: 15px
+		img
+			width: 40px
+
+	// menu-function //
+	.menu-main-add
+		height: 90vh
+	.menu-wrap-add
+		left: 0vw
+	.menu-bg-add
+		opacity: 1
+	.menu-mask-add
+		left: 0vw
+
+	// --header-- //
+	.header
+		background-color: #fff
+		height: 100vh
+		width: 100%
+		overflow: hidden
+	.header-slideshow-wrap
+		z-index 1
+	.header-slideshow
+		width: 100%
+		height: 100vh
+	.header-logo
+		position: absolute
+		z-index: 2
+		img
+			width: 150px
+			left: calc(50vw - 75px)
+			top: calc(50vh - 130px)
+
+	// --about-- //
+	.about
+		width: 100%
+		height: 100vh
+		overflow: hidden
+		z-index: 2
+	.about-bg
+		width: 80%
+		+absolute_center
+		overflow: hidden
+		+boxstyle
+		video
+			width: 100%
+			z-index: 1
+	.about-mask
+		width: 80%
+		background-color: #000
+		+absolute_center
+		opacity: .5
+		z-index: 2
+	.about-content
+		max-width: 70%
+		text-align: left
+		z-index: 2
+		top: calc(50vh - 150px)
+		+lrcenter
+	.about-text
+		top: 0px
+		opacity: 0
+		margin-top: 15px
+		p
+			color: #fff
+			font-size: 16px
+
+	.about-text-title
+		padding-bottom: 5px
+		margin-bottom: 0px
+		border-bottom: 1px solid #fff
+		p
+			font-weight: bold
+			font-size: 20px
+			line-height: 40px
+
+	// -about-function- //
+
+
+
+	// --product-- //
+	.product
+		width: 100%
+		height: 100vh
+	.product-bg-wrap
+		width: 100%
+		height: 100vh
+		position: absolute
+	// -product-bg-img-//
+	.product-bg-img
+		+absolute_center
+		padding-top: 0%
+		opacity: 1
+		img
+			transition: all 1.5s ease
+	// pita-parallax-bg //
+	.pita
+		.product-bg-img:nth-child(1)
+			// leaf //
+			img
+				width: 40px
+				left: 5%
+				margin-top: 10%
+				transform: rotate(-30deg)
+		.product-bg-img:nth-child(2)
+			// redpotato //
+			img
+				width: 100px
+				left: 70%
+				top: 0%
+				transform: rotate(-30deg)
+		.product-bg-img:nth-child(3)
+			// ypotato //
+			img
+				width: 140px
+				filter: blur(5px)
+				left: 5%
+				top: 70%
+
+		.product-bg-img:nth-child(4)
+			z-index: 2
+			// onion //
+			img
+				width: 100px
+				left: 35%
+				top: 85%
+		.product-bg-img:nth-child(5)
+			z-index: 1
+			// egg //
+			img
+				width: 220px
+				left: 55%
+				top: 70%
+	.pita-productbg-down
+		.product-bg-img:nth-child(1)
+			// leaf //
+			img
+				margin-top: 40%
+		.product-bg-img:nth-child(2)
+			// redpotato //
+			img
+				top: 75%
+		.product-bg-img:nth-child(3)
+			// ypotato //
+			img
+				width: 130px
+				top: 110%
+				left: 10%
+		.product-bg-img:nth-child(4)
+			// onion //
+			img
+				top: 90%
+		.product-bg-img:nth-child(5)
+			// egg //
+			img
+				top: 80%
+	.pita-productbg-up
+		.product-bg-img:nth-child(1)
+			// leaf //
+			img
+				margin-top: 10%
+		.product-bg-img:nth-child(2)
+			// redpotato //
+			img
+				top: -5%
+		.product-bg-img:nth-child(3)
+			// ypotato //
+			img
+				top: -15%
+		.product-bg-img:nth-child(4)
+			// onion //
+			img
+				top: 35%
+		.product-bg-img:nth-child(5)
+			// egg //
+			img
+				top: 30%
+
+	// toast-parallax-bg //
+	.toast
+		.product-bg-img:nth-child(1)
+			// sauce //
+			width: 150px
+			img
+				margin-left: 300%
+				margin-top: 350%
+				width: 150px
+		.product-bg-img:nth-child(2)
+			// redpotato //
+			width: 330px
+			img
+				margin-left: -170%
+				margin-top: 130%
+				width: 250px
+		.product-main-img
+			width: 500px
+			img
+				width: 500px
+	.toast-productbg-up
+		.product-bg-img:nth-child(1)
+			// sauce //
+			img
+				margin-top: 150%
+		.product-bg-img:nth-child(2)
+			// redpotato //
+			img
+				margin-top: 0%
+	.toast-productbg-down
+		.product-bg-img:nth-child(1)
+			// sauce //
+			img
+				margin-top: 60%
+		.product-bg-img:nth-child(2)
+			// redpotato //
+			img
+				margin-left: -170%
+				margin-top: 130%
+				width: 250px
+	// drink-parallax-bg //
+	.drink
+		.product-bg-img:nth-child(1)
+			// Yflower //
+			img
+				width: 350px
+				margin-left: 55%
+				margin-top: 0%
+				animation: loopphoto 20s 1s infinite
+				animation-timing-function: linear
+		@-webkit-keyframes loopphoto
+			0%
+				transform: rotate(0deg)
+			100%
+				transform: rotate(360deg)
+		.product-bg-img:nth-child(2)
+			// Wflower //
+			img
+				width: 250px
+				margin-left: 20%
+				margin-top: 35%
+				transform: rotate(30deg)
+		.product-bg-img:nth-child(3)
+			// leftLeaf //
+			img
+				margin-left: 0%
+				margin-top: 25%
+				width: 350px
+				filter: blur(15px)
+		.product-bg-img:nth-child(4)
+			// rightLeaf //
+			img
+				margin-left: 70%
+				margin-top: 40%
+				width: 250px
+		.product-main-img
+			width: 450px
+			margin-top: -50px
+			img
+				width: 450px
+	.drink-productbg-up
+		.product-bg-img:nth-child(1)
+			// Yflower //
+			img
+				margin-top: 0%
+		.product-bg-img:nth-child(2)
+			// Wflower //
+			img
+				margin-top: 5%
+		.product-bg-img:nth-child(3)
+			// leftLeaf //
+			img
+				margin-top: 5%
+		.product-bg-img:nth-child(4)
+			// rightLeaf //
+			img
+				margin-top: 5%
+	.drink-productbg-down
+		.product-bg-img:nth-child(1)
+			// Yflower //
+			img
+				margin-top: 25%
+		.product-bg-img:nth-child(2)
+			// Wflower //
+			img
+				margin-top: 40%
+		.product-bg-img:nth-child(3)
+			// leftLeaf //
+			img
+				margin-top: 25%
+		.product-bg-img:nth-child(4)
+			// rightLeaf //
+			img
+				margin-top: 35%
+
+	.product-img-wrap
+		width: 100%
+		height: 100vh
+		z-index: 1
+		+absolute_center
+		margin-top: 30vh
+	.product-bg-circle
+		width: 380px
+		height: 380px
+		z-index: 1
+		+absolute_center
+		svg
+			width: 380px
+			transform: rotate(66deg)
+			animation: circle-bg-out 3s forwards
+	.product-bg-circle-add
+		svg
+			animation: circle-bg-in 3s forwards
+
+
+	@-webkit-keyframes circle-bg-in
+		0%
+			transform: rotate(66deg)
+		100%
+			transform: rotate(300deg)
+
+	@-webkit-keyframes circle-bg-out
+		10%
+			transform: rotate(300deg)
+		100%
+			transform: rotate(66deg)
+
+
+	.product-main-bg
+		width: 330px
+		z-index: 1
+		+absolute_center
+		top: 50vh
+		left: 5%
+		margin-top: 200px
+		img
+			width: 330px
+	.product-main-img
+		width: 330px
+		+absolute_center
+		z-index: 2
+		top: calc(50vh - 200px)
+		margin-top: -20px
+		img
+			width: 330px
+	.product-wrap
+		width: 100%
+		height: 100vh
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: center
+	.product-info-wrap, .product-description-wrap
+		width: 35%
+		height: 100%
+		text-align: center
+	.product-info-wrap
+		color: $blue
+		margin-top: 10%
+		margin-right: 10%
+		z-index: 2
+	.product-eat
+		margin-left: -20%
+		span
+			font-size: 24px
+			font-weight: bold
+	.product-name-en
+		margin-left: 55%
+		margin-top: -5%
+		span
+			opacity: 0
+			margin-left: 0px
+			font-size: 100px
+			letter-spacing: -10px
+			font-weight: bold
+	.product-info-line
+		width: 0%
+		height: 2px
+		background-color: $blue
+		margin-top: 5%
+		margin-left: 20%
+		animation: inofol-in 1.8s forwards
+
+	@-webkit-keyframes inofol-in
+		0%
+			width: 0%
+		20%
+			width: 0%
+		100%
+			width: 65%
+	@-webkit-keyframes inofol-out
+		0%
+			width: 65%
+		20%
+			width: 65%
+		100%
+			width: 0%
+
+	.product-info-line-add
+		animation: inofol-out 1.8s forwards
+
+	.product-name-cht
+		margin-top: 10%
+		span
+			font-size: 24px
+			font-weight: bold
+	.product-category-wrap
+		margin-top: 20%
+	.product-category
+		width: 25%
+		margin-left: 35%
+		transition: all .5s ease
+		cursor: pointer
+		padding: 15px 0px
+		opacity: 0
+		span
+			font-size: 17px
+			font-weight: bold
+			transition: all .5s ease
+			margin-left: 0%
+			white-space: nowrap
+	.product-category-line
+		margin-top: 20px
+		width: 0%
+		transition: all .5s ease
+		height: 2px
+		background-color: #93293F
+	.product-category:hover .product-category-line
+		margin-left: 25%
+	.product-category:hover span
+		margin-left: 45%
+	.product-category:hover .product-category-line
+		width: 100%
+	.product-category:nth-child(1)
+		left: 30px
+	.product-category:nth-child(2)
+		left: 0px
+	.product-category:nth-child(3)
+		left: -30px
+	.product-category:nth-child(4)
+		left: -60px
+	.product-description-wrap
+		margin-top: 25%
+		width: 20%
+		margin-left: 20%
+		text-align: left
+		z-index: 3
+		a
+			display: block
+			width: 200px
+	.product-more-btn
+		width: 200px
+		text-align: left
+		cursor: pointer
+		left: 0px
+		transition: all .6s ease
+		span
+			font-size: 16px
+			font-weight: bold
+			letter-spacing: 2px
+			color: #93293F
+			left: 0px
+			transition: all .6s ease
+		img
+			width: 11px
+			left: 20px
+			top: 2px
+			transition: all .6s ease
+	.product-more-line
+		margin-top: 20px
+		left: -15px
+		margin-bottom: 15px
+		width: 0px
+		height: 2px
+		background-color: #93293F
+		transition: all .6s ease
+	.product-more-btn:hover .product-more-line
+		width: 120px
+	.product-more-btn:hover
+		span
+			left: 30px
+		img
+			left: 60px
+		.product-more-line
+			left: 20px
+
+	.product-description
+		p
+			font-weight: normal
+			line-height: $l2
+			color: $blue
+
+	// -product-svg- //
+	.product-bg-svg
+		fill: none
+		stroke: $green
+		stroke-width: 3px
+		stroke-miterlimit: 10
+
+
+	// -prout-function- //
+
+
+
+	// --news-- //
+	.news
+		width: 100%
+		height: 100vh
+		overflow: hidden
+	.news-box-wrap
+		max-width: 960px
+		height: 80vh
+		+absolute_center
+		display: flex
+		align-items: center
+		flex-direction: column
+		justify-content: space-between
+	.news-bg
+		position: absolute
+		z-index: 1
+		width: 100%
+		height: 100vh
+		img
+			width: 350px
+			top: 55vh
+			left: 5%
+			filter: blur(10px)
+			transform: rotate(-20deg)
+	.news-box
+		z-index: 2
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: space-between
+	.news-box-mobile
+		display: none
+	.news-img-wrap
+		width: 48%
+		z-index: 1
+		transition: all .8s ease
+		opacity: 1
+		img
+			width: 100%
+			+boxstyle
+	.news-mask
+		width: 80%
+		height: 70%
+		border: 5px solid #fff
+		+absolute_center
+	.news-info-wrap
+		width: 48%
+		z-index: 2
+	.news-date
+		width: 95%
+		margin-top: -25%
+		position: absolute
+		background-color: #FFF
+		p
+			padding: 15px 30px
+			font-size: 32px
+			letter-spacing: 15px
+			font-weight: bold
+			color: $green
+	.news-info
+		opacity: 1
+		transition: all .8s ease
+		p
+			color: $blue
+	.news-box:nth-child(1)
+		.news-date
+			left: -60%
+			opacity: 1
+			transition: all 1.2s ease
+	.news-box:nth-child(2)
+		.news-date
+			left: 60%
+			opacity: 1
+			transition: all 1.2s ease
+	// news-function //
+	.news-box-wrap-add
+		.news-img-wrap
+			opacity: 0
+		.news-info
+			opacity: 0
+		.news-box:nth-child(1)
+			.news-date
+				left: 0%
+				opacity: 0
+		.news-box:nth-child(2)
+			.news-date
+				left: 0%
+				opacity: 0
+
+
+
+	// --blog-- //
+	.blog
+		width: 100%
+		height: 100vh
+	.blog-coming
+		width: 80%
+		height: 75vh
+		+boxstyle
+		+absolute_center
+		background-image: url(../images/headerBanner/5.jpg)
+		background-size: cover
+		background-position: center
+		z-index: 8
+	.blog-mask
+		width: 80%
+		height: 75vh
+		+absolute_center
+		z-index: 9
+		background-color: #000
+		opacity: .5
+		text-align: center
+		p
+			color: #fff
+			opacity: 1
+			top: 35vh
+			font-size: 50px
+			line-height: 60px
+			font-weight: normal
+			letter-spacing: 5px
+		.hehe
+			font-size: 17px
+			top: 35vh
+
+
+	.blog-title
+		margin: 30px
+		padding-top: 10vh
+		max-width: 1280px
+		+lrcenter
+		text-align: center
+		p
+			margin-top: 30px
+		span
+			font-size: 120px
+			color: $green
+	.blog-slideshow
+		width: 55%
+		+lrcenter
+	.blog-wrap
+		width: 100%
+		margin-top: 30px
+		text-align: left
+		img
+			width: 300px
+			margin: 10px
+			left: 0
+			right: 0
+		p, h3
+			width: 300px
+			margin: auto
+			margin-top: 10px
+			left: 0
+			right: 0
+			text-align: left
+		h3
+			font-size: 20px
+			color: $green
+			margin-top: 20px
+
+	// -- where -- //
+	.where
+		width: 100%
+		height: 100vh
+	.where-bg
+		max-width: 80%
+		height: 75vh
+		+absolute_center
+		background-image: url(../images/headerBanner/whereBg.jpg)
+		background-size: cover
+		background-position: center
+		z-index: 2
+	.where-mask
+		max-width: 80%
+		height: 75vh
+		background-color: #000
+		opacity: .3
+		z-index: 3
+		+absolute_center
+	.where-wrap
+		max-width: 960px
+		+lrcenter
+		text-align: center
+		padding-top: 15vh
+		padding-left: 30px
+		padding-right: 30px
+		z-index: 4
+		display: flex
+		align-items: top
+		flex-direction: row
+		justify-content: space-between
+	.where-info-wrap
+		width: 40%
+		padding-left: 15px
+		padding-right: 15px
+		margin-bottom: 15px
+		img
+			width: 40px
+			margin-bottom: 15px
+			margin-top: 15px
+		h3
+			color: #fff
+			margin: 0px
+			letter-spacing: 1px
+		p
+			color: #fff
+			letter-spacing: 1px
+			line-height: $s2
+	.where-little-speak
+		max-width: 800px
+		+lrcenter
+		text-align: center
+		z-index: 6
+		margin-top: 3vh
+
+		p
+			color: #fff
+			letter-spacing: 1px
+	.where-map-wrap
+		z-index: 5
+		max-width: 960px
+		+lrcenter
+		text-align: center
+		+boxstyle
+		margin-top: 15px
+		iframe
+			width: 100%
+			height: 250px
+
+	// coming-soon //
+	.coming-soon-wrap
+		width: 100%
+		height: 100vh
+		z-index: 20
+		position: fixed
+		display: none
+	.coming-soon-bg
+		background-image: url("../images/headerBanner/6.jpg")
+		background-position: center
+		background-size: cover
+		text-align: center
+		width: 100%
+		height: 100vh
+		position: absolute
+		z-index: 20
+	.coming-soon-mask
+		width: 100%
+		height: 100vh
+		background-color: #000
+		opacity: .5
+		position: absolute
+		z-index: 21
+	.coming-soon
+		width: 80%
+		height: 40vh
+		z-index: 22
+		opacity: .5
+		+absolute_center
+		text-align: center
+		p
+			font-size: 50px
+			line-height: 70px
+			color: #fff
+		.hehe
+			font-size: 17px
+			color: #fff
+			opacity: .1
+
+	// -- pita-page -- //
+	.header-page-wrap
+		width: 100%
+		height: 100vh
+	.header-page-logo
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: 1
+		text-align: center
+		img
+			+absolute_center
+			width: 120px
+	.header-page-slide
+		width: 100%
+		height: 100%
+		overflow: hidden
+		img
+			width: 100%
+
+	// page-main //
+	.page-slideshow
+		width: 100%
+		+lrcenter
+		margin-top: -30px
+		z-index: 2
+	.page-product-title-wrap
+		width: 70%
+		+lrcenter
+		text-align: left
+		margin-top: 30px
+		z-index: 2
+	.page-title-en
+		width: 45%
+		display: inline-block
+		vertical-align: bottom
+		h2
+			font-size: 100px
+			font-weight: bold
+			color: $green
+	.page-title-cht
+		width: 45%
+		display: inline-block
+		margin-bottom: -30px
+		h2
+			font-size: 32px
+			line-height: $l1
+			font-weight: bold
+			color: $green
+	.page-slideshow-wrap
+		width: 100%
+	#parallax_Page
+		position: absolute
+	// pageParallax-bg //
+	.page-parallax-bg
+		width: 100%
+		z-index: 1
+	.page-parallax-img
+		width: 100%
+		height: 100vh
+		position: absolute
+		img
+			transition: all .8s ease
+			left: 0%
+			top: 0%
+	.pitaPage
+		.page-parallax-img:nth-child(1)
+			img
+				width: 50px
+				left: 5%
+				top: 10%
+		.page-parallax-img:nth-child(2)
+			img
+				width: 150px
+				filter: blur(15px)
+				left: 75%
+				top: 5%
+		.page-parallax-img:nth-child(3)
+			img
+				width: 150px
+				left: 5%
+				top: 115%
+				transform: rotate(-15deg)
+		.page-parallax-img:nth-child(4)
+			img
+				width: 200px
+				left: 90%
+				top: 80%
+				transform: rotate(-15deg)
+	.toastPage
+		.page-parallax-img:nth-child(1)
+			img
+				width: 200px
+				left: 0%
+				top: 100%
+		.page-parallax-img:nth-child(2)
+			img
+				width: 150px
+				filter: blur(5px)
+				left: 70%
+				top: 15%
+
+	.drinkPage
+		.page-parallax-img:nth-child(1)
+			img
+				width: 350px
+				left: 60%
+				top: 20%
+		.page-parallax-img:nth-child(2)
+			img
+				width: 220px
+				left: 5%
+				top: 30%
+		.page-parallax-img:nth-child(3)
+			img
+				width: 250px
+				left: -10%
+				top: 90%
+				transform: rotate(0deg)
+				filter: blur(15px)
+		.page-parallax-img:nth-child(4)
+			img
+				width: 320px
+				filter: blur(5px)
+				left: 70%
+				top: 80%
+
+
+	// category-wrap //
+	.category-wrap
+		width: 90%
+		+lrcenter
+		margin-top: 10vh
+		display: flex
+		align-items: top
+		flex-direction: clumn
+		justify-content: center
+	.category-img
+		width: 45%
+	.category-main-img
+		img
+			width: 600px
+	.pitaPage
+		.category-img-1
+			img
+				width: 550px
+				margin-left: -15%
+				margin-top: -10%
+		.category-img-2
+			img
+				width: 500px
+				margin-left: -15%
+				margin-top: -10%
+		.category-img-3
+			img
+				width: 400px
+				margin-left: 5%
+				margin-top: 10%
+	.toastPage
+		.category-img-1
+			img
+				width: 550px
+				margin-left: -20%
+				margin-top: -10%
+		.category-img-2
+			img
+				width: 550px
+				margin-left: -20%
+				margin-top: -10%
+		.category-img-3
+			img
+				width: 500px
+				margin-left: -15%
+				margin-top: -5%
+		.category-img-4
+			img
+				width: 550px
+				margin-left: -20%
+				margin-top: -10%
+	.drinkPage
+		.category-img-1
+			img
+				width: 500px
+				margin-left: -15%
+				margin-top: -10%
+
+
+	.category-circle-body
+		width: 100%
+		height: 100vh
+		position: absolute
+	.category-circle
+		width: 100%
+		left: 0%
+		top: 15%
+		transform: scale(1)
+		transition: all .4s ease
+		position: absolute
+		opacity: 1
+		svg
+			width: 450px
+			height: 450px
+			transform: rotate(90deg)
+	.category-circle-add
+		transform: scale(.5)
+		opacity: 0
+		left: -12%
+	// -product-svg- //
+	.category-bg-svg
+		fill: none
+		stroke: $green
+		stroke-width: 2px
+		stroke-miterlimit: 10
+	.category-popoup-btn
+		width: 50px
+		height: 50px
+		top: 200px
+		left: 150px
+		z-index: 5
+		border-radius: 50px
+		transition: all .8s ease
+		transform: scale(1)
+		cursor: pointer
+		position: absolute
+	.category-popoup-btn:hover
+		transform: scale(1.2)
+	.category-circle-out
+		width: 60px
+		height: 60px
+		border-radius: 50px
+		background-color: #fff
+		opacity: .5
+		position: absolute
+	.category-circle-middle
+		width: 44px
+		height: 44px
+		left: 8px
+		top: 8px
+		border-radius: 50px
+		background-color: #fff
+		opacity: 1
+		position: absolute
+	.category-circle-left
+		width: 24px
+		left: 18px
+		top: 28px
+		height: 2px
+		border-radius: 1px
+		background-color: $green
+		position: absolute
+	.category-circle-right
+		width: 24px
+		left: 18px
+		top: 28px
+		height: 2px
+		border-radius: 1px
+		background-color: $green
+		position: absolute
+		transform: rotate(90deg)
+	.category-info-wrap-box
+		width: 45%
+		margin-top: -5vh
+		display: flex
+		align-items: left
+		flex-direction: column
+		justify-content: center
+	.category-info-name
+		h3
+			margin: 0px
+			margin-bottom: 50px
+			margin-left: 15px
+			font-size: 24px
+			color: $green
+	.category-info-intro
+		p
+			color: $grayLight
+	.category-info-wrap-group
+		display: flex
+		align-items: top
+		flex-direction: row
+		justify-content: space-between
+		margin-left: -30px
+	.category-info-wrap
+		margin-top: 30px
+		margin-right: 90px
+	.category-info-box
+		width: 100%
+		margin: 20px 0px
+		margin-right: 30px
+		display: flex
+		align-items: top
+		flex-direction: row
+		justify-content: left
+		cursor: pointer
+		margin-left: 0px
+
+
+	.category-info-img
+		height: 25px
+		width: 25px
+		border-radius: 25px
+		border: 2px solid $green
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: center
+		transition: all .8s ease
+		transform: scale(1)
+		left: -10px
+		img
+			width: 8px
+	.category-info-box:hover
+		transition: all .6s ease
+		.category-info-img
+
+			left: 0px
+	.category-content
+		text-align: left
+		margin-left: 15px
+		h2
+			padding: 0px
+			margin: 0px
+			font-size: 20px
+			font-weight: bold
+			color: $green
+			line-height: $s2
+		p
+			margin: 0px
+			color: $grayLight
+
+
+	// -- control -- //
+	.category-control-wrap
+		width: 100%
+		height: 100px
+		overflow: hidden
+		position: fixed
+		background-color: #FFF
+		bottom: -120px
+		z-index: 9
+		transition: bottom .6s ease-in-out
+	.category-control-wrap-add
+		bottom: 0px
+		position: fixed
+
+	.control-container
+		width: 35%
+		+lrcenter
+		text-align: center
+		display: flex
+		align-items: center
+		flex-direction: clumn
+		justify-content: space-between
+	.control-left-wrap, .control-right-wrap
+		width: 100px
+		text-align: right
+		cursor: pointer
+		margin-top: 15px
+		transition: .6s all ease
+		img
+			width: 10px
+			transition: .8s all ease
+	.control-left-wrap
+		text-align: right
+		transform: rotate(180deg)
+		img
+			padding-left: 20px
+			left: -50px
+	.control-right-wrap
+		img
+			padding-left: 20px
+			left: -50px
+	.control-line
+		margin-top: 15px
+		margin-bottom: 15px
+		width: 0%
+		height: 2px
+		background-color: $green
+		transition: .6s all ease
+	.control-right-wrap:hover
+		.control-line
+			width: 100%
+		img
+			left: -20px
+	.control-left-wrap:hover
+		.control-line
+			width: 100%
+		img
+			left: -20px
+	.control-middle-slick
+		width: 100%
+		overflow: hidden
+	.control-category-name
+		span
+			font-size: 50px
+			font-weight: bold
+			color: $green
+			opacity: 1
+		p
+			font-size: $s3
+			line-height: $l3
+			color: $grayLight
+			opacity: 1
+
+	.full-photo-wrap
+		width: 100%
+		height: 100vh
+		overflow: hidden
+		z-index: 15
+		top: 0vh
+		opacity: 1
+		transition: .5s all ease-in-out
+		position: fixed
+		background-color: #FFF
+	.full-photo-bg
+		width: 100%
+		height: 100vh
+		background-color: $green
+		z-index: 6
+		top: 0vh
+		transition: .5s all ease-in-out
+		position: absolute
+	.full-photo-animate
+		width: 100%
+		height: 100vh
+		background-color: #fff
+		z-index: 7
+		top: 0vh
+		transition: .5s all ease-in-out
+		position: absolute
+	.full-photo-box
+		width: 70%
+		+lrcenter
+		z-index: 8
+		opacity: 1
+		transition: .5s all ease-in-out
+		img
+			width: 100%
+	.full-photo-control
+		width: 30%
+		height: 100px
+		position: absolute
+		z-index: 8
+		margin: auto
+		left: 0
+		right: 0
+		bottom: 30px
+		display: flex
+		align-items: center
+		flex-direction: clumn
+		justify-content: space-between
+		transition: .8s all ease
+	.full-left-wrap, .full-right-wrap
+		width: 40px
+		height: 40px
+		border-radius: 25px
+		border: 2px solid $green
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: center
+		cursor: pointer
+		transition: .3s all ease
+		transform: scale(1)
+		img
+			width: 10px
+	.full-left-wrap
+		img
+			transform: rotate(180deg)
+	.full-right-wrap
+	.full-left-wrap:hover
+		transform: scale(1.2)
+	.full-right-wrap:hover
+		transform: scale(1.2)
+	.full-close
+		cursor: pointer
+		transition: all .8s ease
+		z-index: 9
+		opacity: 1
+		top: 80vh
+	.full-close-bg
+		width: 40px
+		height: 40px
+		border-radius: 25px
+		border: 2px solid $green
+		background-color: #fff
+		transition: all .8s ease
+		+absolute_center
+	.full-close-left, .full-close-right
+		width: 18px
+		height: 2px
+		border-radius: 2px
+		background-color: $green
+		transform: rotate(0deg)
+		transition: all .6s ease
+		+absolute_center
+	.full-close:hover .full-close-left
+		transform: rotate(45deg)
+		width: 20px
+	.full-close-right
+	.full-close:hover .full-close-right
+		transform: rotate(-45deg)
+		width: 20px
+	.full-close-text
+		+absolute_center
+		text-align: center
+		margin-top: 32px
+		span
+			color: $green
+			font-size: $s3
+
+	.full-photo-wrap-add
+		top: -100vh
+		.full-close
+			opacity: 0
+			top: 120vh
+		.full-photo-control
+			bottom: -10vh
+		.full-photo-box
+			opacity: 0
+		.full-photo-bg
+			top: -100vh
+		.full-photo-animate
+			top: -100vh
+
+
+
+	.footer
+		z-index: 9
+		width: 80%
+		+lrcenter
+		padding: 60px 0px
+		margin-top: 50vh
+		border-top: 2px solid $green
+		background-color: #FFF
+		display: flex
+		flex-direction: row
+		align-items: top
+		justify-content: center
+		text-align: left
+	.footer-box
+		max-width: 350px
+		display: flex
+		align-items: top
+		justify-content: center
+		transition: bottom .5s ease
+		bottom: 0px
+		cursor: pointer
+	.footer-box:hover
+		bottom: 10px
+	.footer-icon
+		img
+			width: 40px
+			margin: 0px 30px
+	.footer-info
+		h3
+			margin: 0px
+			color: $green
+			margin-bottom: 5px
+			line-height: $l4
+		p
+			color: $green
+
+	.copyRight
+		width: 80%
+		height: 50px
+		+lrcenter
+		text-align: center
+		background-color: #FFF
+		z-index: 9
+
